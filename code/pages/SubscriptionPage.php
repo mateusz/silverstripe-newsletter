@@ -27,6 +27,11 @@ class SubscriptionPage extends Page {
 		'SubmissionButtonText' => 'Submit'
 	);
 	
+	/**
+	 * Allows to disable the spam protection from configuration files
+	 */
+	static $use_spam_protection = true;
+
 	function getCMSFields() {
 		$fields = parent::getCMSFields();
 		$fields ->addFieldToTab("Root.Content",
@@ -229,6 +234,11 @@ class SubscriptionPage_Controller extends Page_Controller {
 			})(jQuery);
 JS
 		);
+		
+		if(class_exists('SpamProtectorManager') && SubscriptionPage::$use_spam_protection) {
+				SpamProtectorManager::update_form($form);
+		}
+		
 		return $form;
 	}
 	
