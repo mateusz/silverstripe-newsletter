@@ -13,3 +13,4 @@ Director::addRules(50, array(
 
 Object::add_extension('NewsletterEmail', 'TrackingLinksEmail');
 DataObject::add_extension('Member', 'NewsletterRole');
+DataObject::add_extension('SiteConfig', 'NewsletterSiteConfig');

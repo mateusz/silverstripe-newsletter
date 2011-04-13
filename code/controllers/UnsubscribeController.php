@@ -58,7 +58,9 @@ class UnsubscribeController extends Page_Controller {
 			$listForm = $this->EmailAddressForm();
 		}
 		return $this->customise(array(
-			'Content' => $listForm->forTemplate()
+			'Title' => SiteConfig::current_site_config()->UnsubscribeTitle,
+			'Content' => SiteConfig::current_site_config()->UnsubscribeContent,
+			'Form' => $listForm->forTemplate()
 		))->renderWith('Page');
     }
 
