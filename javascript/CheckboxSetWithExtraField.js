@@ -6,17 +6,19 @@
 		 *
 		 * Needs to reapply events when tab is changed.
 		 */
-    	$("table.checkboxsetwithextrafield").tableDnD({
-			onDragClass: "DnD_whiledragging",
-			dragHandle: "dragHandle",
-			onDragStart: function(table, row) {
-				indicator = document.createElement('div');
-				indicator.innerHTML = 'Moving the row ...';
-				$(row).append(indicator);
-			},
-			onDrop:function(table, row){
-				jQuery($(row).children(".dragHandle")[0]).empty();
-			}
+    	$("table.checkboxsetwithextrafield").livequery(function(){
+			$(this).tableDnD({
+				onDragClass: "DnD_whiledragging",
+				dragHandle: "dragHandle",
+				onDragStart: function(table, row) {
+					indicator = document.createElement('div');
+					indicator.innerHTML = 'Moving the row ...';
+					$(row).append(indicator);
+				},
+				onDrop:function(table, row){
+					jQuery($(row).children(".dragHandle")[0]).empty();
+				}
+			});
 		});
 		
 		$("table.checkboxsetwithextrafield tbody tr").live("mouseover", function(){
