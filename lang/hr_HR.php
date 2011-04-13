@@ -48,8 +48,7 @@ $lang['hr_HR']['NewsletterAdmin_right.ss']['ONLYNOT'] = 'Pošalji samo korisnici
 $lang['hr_HR']['NewsletterAdmin_right.ss']['SEND'] = 'Pošalji newsletter';
 $lang['hr_HR']['NewsletterAdmin_right.ss']['SENDTEST'] = 'Pošalji test na';
 $lang['hr_HR']['NewsletterAdmin_right.ss']['WELCOME1'] = 'Dobrodošli na';
-$lang['hr_HR']['NewsletterAdmin_right.ss']['WELCOME2'] = 'administraciju newslettera. Odaberite direktorij s lijeve strane.
-';
+$lang['hr_HR']['NewsletterAdmin_right.ss']['WELCOME2'] = 'administraciju newslettera. Odaberite direktorij s lijeve strane.';
 $lang['hr_HR']['NewsletterAdmin_SiteTree.ss']['DRAFTS'] = 'Privremeni';
 $lang['hr_HR']['NewsletterAdmin_SiteTree.ss']['MAILLIST'] = 'Mailing liste';
 $lang['hr_HR']['NewsletterAdmin_SiteTree.ss']['SENT'] = 'Poslani';
